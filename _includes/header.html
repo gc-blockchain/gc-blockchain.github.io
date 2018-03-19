@@ -47,11 +47,14 @@
     <div class="container">
       <div class="row">
         <div id="wb-sttl" class="col-md-5">
-          <a href="{{ site.baseurl }}/home.html">
-            <span>{{ site.title.en }}</span>
-          </a>
+          {% if page.lang == "en" %}
+            <a href="{{ site.baseurl }}/home.html"><span>{{ site.title.en }}</span></a></li>
+          {% else %}
+            <a href="{{ site.baseurl }}/accueil.html"><span>{{ site.title.fr }}</span></a></li>
+          {% endif %}
         </div>
         <img id="wmms" src="{{ site.baseurl }}/assets/wet-boew/assets/wmms.svg" alt="Symbol of the Government of Canada">
+
         <!-- Remove Search
         <section id="wb-srch" class="visible-md visible-lg">
           <h2>{{ site.Search[page.lang] }}</h2>
