@@ -1,0 +1,58 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://gb-blockchain.github.io" # the base hostname & protocol for your site
+# email: gb-blockchain@canada.ca
+# twitter_username: gb-blockchain
+# github_username: gb-blockchain
+
+# Translations
+title:
+  en: GC Blockchain Hackathon
+  fr: Hackathon Blockchain GC
+description:
+  en: GC Blockchain Hackathon
+  fr: Hackathon Blockchain GC
+index:
+  en: index.html
+  fr: accueil.html
+home:
+  en: Home
+  fr: Accueil
+language:
+  en: English
+  fr: Français
+SkipToMain:
+  en: Skip to main content
+  fr: Passer au contenu principal
+SkipToAbout:
+  en: Skip to "About this site"
+  fr: Passer à « À propos de ce site »
+LanguageSelection:
+  en: Language selection
+  fr: Sélection de la langue
+GoC:
+  en: Government of Canada
+  fr: Gouvernement du Canada
+SearchAndMenus:
+  en: Search and menus
+  fr: Recherche et menus
+SearchWebsite:
+  en: Search website
+  fr: Recherchez le site Web
+Search:
+  en: Search
+  fr: Recherche
+TopicsMenu:
+  en: Topics menu
+  fr: Menu des sujets
+
+# Build settings
+markdown: kramdown
+include: ["_pages"]

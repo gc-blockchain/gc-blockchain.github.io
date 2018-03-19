@@ -1,0 +1,97 @@
+<ul id="wb-tphp">
+  <li class="wb-slc">
+    <a class="wb-sl" href="#wb-cont">{{ site.SkipToMain[page.lang] }}</a>
+  </li>
+  <li class="wb-slc visible-sm visible-md visible-lg">
+    <a class="wb-sl" href="#wb-info">{{ site.SkipToAbout[page.lang] }}</a>
+  </li>
+</ul>
+<header role="banner">
+  <div id="wb-bnr">
+    <div id="wb-bar">
+      <div class="container">
+        <div class="row">
+          <img id="gcwu-sig" src="{{ site.baseurl }}/assets/wet-boew/assets/sig-en.svg" alt="Government of Canada / Gouvernement du Canada">
+          <ul id="gc-bar" class="list-inline">
+            <li><a href="https://github.com/gc-blockchain/gc-blockchain.github.io" rel="external">Github</a></li>
+            <li id="wb-lng"><h2>{{ site.LanguageSelection[page.lang] }}</h2>
+              <ul class="list-inline">
+                {% assign posts=site.posts | where:"ref", page.ref | sort: 'lang' %}
+                {% for my_post in posts %}
+                  {% if my_post.lang != page.lang %}
+                    <li><a lang="{{ my_post.lang }}" href="{{ my_post.url | prepend: post.baseurl }}">{{ site.language[my_post.lang] }}</a></li>
+                  {% endif %}
+                {% endfor %}  
+
+                {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+                {% for my_page in pages %}
+                  {% if my_page.lang != page.lang %}
+                    <li><a lang="{{ my_page.lang }}" href="{{ my_page.url | prepend: site.baseurl }}">{{ site.language[my_page.lang] }}</a></li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </li>
+          </ul>
+
+          <section class="wb-mb-links col-xs-12 visible-sm visible-xs" id="wb-glb-mn">
+            <h2>{{ site.SearchAndMenus[page.lang] }}</h2>
+            <ul class="pnl-btn list-inline text-right">
+              <li><a href="#mb-pnl" title="Search and menus" aria-controls="mb-pnl" class="overlay-lnk btn btn-sm btn-default" role="button"><span class="glyphicon glyphicon-search"><span class="glyphicon glyphicon-th-list"><span class="wb-inv">{{ site.SearchAndMenus[page.lang] }}</span></span></span></a></li>
+            </ul>
+            <div id="mb-pnl"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div id="wb-sttl" class="col-md-5">
+          <a href="{{ site.baseurl }}/home.html">
+            <span>{{ site.title.en }}</span>
+          </a>
+        </div>
+        <img id="wmms" src="{{ site.baseurl }}/assets/wet-boew/assets/wmms.svg" alt="Symbol of the Government of Canada">
+        <!-- Remove Search
+        <section id="wb-srch" class="visible-md visible-lg">
+          <h2>{{ site.Search[page.lang] }}</h2>
+          <form action="https://google.ca/search" method="get" role="search" class="form-inline">
+            <div class="form-group">
+              <label for="wb-srch-q">{{ site.SearchWebsite[page.lang] }}</label>
+              <input id="wb-srch-q" class="form-control" name="q" type="search" value="" size="27" maxlength="150">
+              <input type="hidden" name="q" value="site:gc-blockchain.github.io OR site:github.com/gc-blockchain/">
+            </div>
+            <button type="submit" id="wb-srch-sub" class="btn btn-default">{{ site.Search[page.lang] }}</button>
+          </form>
+        </section>-->
+      </div>
+    </div>
+  </div>
+
+  <nav role="navigation" id="wb-sm" data-ajax-replace="" data-trgt="mb-pnl" class="wb-menu visible-md visible-lg" typeof="SiteNavigationElement">
+    <div class="container nvbar">
+      <h2>{{ site.TopicsMenu[page.lang] }}</h2>
+      <div class="row"></div>
+    </div>
+  </nav>
+
+  {% if page.ref != "home" %}
+  <nav role="navigation" id="wb-bc" property="breadcrumb">
+    <h2>{{ site.YouAreHere[page.lang] }}:</h2>
+    <div class="container">
+      <div class="row">
+        <ol class="breadcrumb">
+          {% if page.lang == "en" %}
+            <li><a href="{{ site.baseurl }}/home.html">{{ site.home[page.lang] }}</a></li>
+          {% else %}
+            <li><a href="{{ site.baseurl }}/accueil.html">{{ site.home[page.lang] }}</a></li>
+          {% endif %}
+          <li>{{ page.name }}</li>
+        </ol>
+      </div>
+    </div>
+  </nav>
+  {% endif %}
+</header>
+
+<main role="main" property="mainContentOfPage" class="container">
