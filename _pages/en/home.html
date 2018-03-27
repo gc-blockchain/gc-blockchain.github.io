@@ -5,97 +5,22 @@ lang: en
 permalink: home.html
 ---
 
-<h1 id="wb-cont" property="name">{{ site.title.en }}</h1>
-
 <section>
 		<figure>
-			<img src="{{ site.baseurl }}/assets/1170x347-1.png" alt="1170x347" class="img-responsive">
+			<img src="{{ site.baseurl }}/assets/chain.jpeg" alt="Dark bicycle chain" class="img-responsive">
 			<figcaption>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+				<p>{{ site.description[page.lang] }}</p>
 			</figcaption>
 		</figure>
 </section>
 
-<div class="row">
-  <section class="col-md-6">
-    <a href="#"><h2 class="h5">Register for the GC Blockchain Hackathon</h2>
-    <img src="{{ site.baseurl }}/assets/520x296.png" alt="520x296" class="img-responsive thumbnail">
-    </a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </section>
-  <section class="col-md-6">
-    <a href="#"><h2 class="h5">How it works</h2>
-    <img src="{{ site.baseurl }}/assets/520x296.png" alt="520x296" class="img-responsive thumbnail">
-    </a>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-  </section>
-</div>
-
 <section>
-  <h2>More information</h2>
-  <div class="row wb-eqht">
-    <div class="col-md-8 col-sm-12">
-      <section class="col-md-6 col-sm-12">
-        <h3 class="h5"><a href="#">How it works</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium, nulla ab nobis architecto repellendus hic iure laboriosam.</p>
-      </section>
-      <section class="col-md-6 col-sm-12">
-        <h3 class="h5"><a href="#">Rules</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium, nulla ab nobis architecto repellendus hic iure laboriosam.</p>
-      </section>
-      <section class="col-md-6 col-sm-12">
-        <h3 class="h5"><a href="#">Schedule</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium, nulla ab nobis architecto repellendus hic iure laboriosam.</p>
-      </section>
-      <section class="col-md-6 col-sm-12">
-        <h3 class="h5"><a href="#">Use cases and themes</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium, nulla ab nobis architecto repellendus hic iure laboriosam.</p>
-      </section>
-      <section class="col-md-6 col-sm-12">
-        <h3 class="h5"><a href="#">[Hyperlink text]</a></h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque praesentium, nulla ab nobis architecto repellendus hic iure laboriosam.</p>
-      </section>
-    </div>
+  <h2>What is a codefest?</h2>
+  <p>A codefest is a design sprint-like event in which computer programmers, designers, project managers and others involved in software development come together to develop a solution or prototype to solve an issue or opportunity. Other participants often included in a codefest are subject matter experts that collaborate intensively on software projects.</p>
+  <p>During the Government of Canada (GC) Blockchain Codefest, individuals and/or teams are encouraged to develop solutions leveraging blockchain technology that address a public sector problem or opportunity.</p>
 
-    <section class="col-md-4 col-sm-6">
-      <h2>Join the conversation</h2>
-      <h3 class="wb-inv">Twitter</h3>
-      <div class="wb-twitter">
-        <a class="twitter-timeline" href="https://twitter.com/hashtag/GCblockchain" data-widget-id="975738397963771909" data-tweet-limit="3">#GCblockchain</a>
-      </div>
-    </section>
-  </div>
-</section>   
-
-<section class="gc-prtts">
-  <h2>Features</h2>
-  <div class="row">
-    <div class="col-lg-4 col-md-6 mrgn-bttm-md">
-      <a href="#">
-        <figure>
-          <figcaption>[Feature hyperlink text]</figcaption>
-          <img src="{{ site.baseurl }}/assets/360x203.png" alt="360x203" class="img-responsive thumbnail mrgn-bttm-sm">
-          <p>Brief description of the feature being promoted.</p>
-        </figure>
-      </a>
-    </div>
-    <div class="col-lg-4 col-md-6 mrgn-bttm-md">
-      <a href="#">
-        <figure>
-          <figcaption>[Feature hyperlink text]</figcaption>
-          <img src="{{ site.baseurl }}/assets/360x203.png" alt="360x203" class="img-responsive thumbnail mrgn-bttm-sm">
-          <p>Brief description of the feature being promoted.</p>
-        </figure>
-      </a>
-    </div>
-    <div class="col-lg-4 col-md-6 mrgn-bttm-md">
-      <a href="#">
-        <figure>
-          <figcaption>[Feature hyperlink text]</figcaption>
-          <img src="{{ site.baseurl }}/assets/360x203.png" alt="360x203" class="img-responsive thumbnail mrgn-bttm-sm">
-          <p>Brief description of the feature being promoted.</p>
-        </figure>
-      </a>
-    </div>
-  </div>
+  <h3>Why does it exist?</h3>
+  <p>This GC Blockchain Codefest is taking place in order to provide participants an opportunity to work with the GC, academia and industry professionals to develop meaningful contributions to the Government of Canada’s digital future. It serves not only as an incredible networking opportunity for participants, but also as an opportunity to inform Government perspective on blockchain technology.</p>
 </section>
+
+{% include info.html %}
